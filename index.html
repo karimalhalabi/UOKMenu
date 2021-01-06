@@ -1,0 +1,168 @@
+﻿<html>
+
+<head>
+    <title>الكليات</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="لم يكن بزوغ فجر جامعة القلمون في المنطقة ارتجالياً، وإنما جاء ثمرة لجهود عمرها عقود، حيث عُرف أهالي منطقة
+    القلمون عموماً وأهالي مدينة ديرعطية خصوصاً بالاهتمام بشؤون منطقتهم، والعمل الدؤوب للنهوض بمستواها، وقد تسارع هذا
+    الاهتمام على نحو ملحوظ خلال العقدين الماضيين. و كان من أهم المشاريع التي كانت ثمرة تلك الجهود الطيبة مشروع إنشاء
+    جامعة خاصة في ديرعطية، لما لهذا المشروع من أهمية حيوية فـي منظومة التعليم العالي لتي تشهد تطوراً متسارعاً فـي سورية
+    ، ولدور الجامعة البارز فـي مسيرة التطوير والتحديث التي يقودها السيد رئيس الجمهورية الدكتـور بشـار الأسـد فـي بنــاء
+    سوريــة الحديثــة، وذلك إيمانـاً من المؤسسين بما لهذا المشروع من انعكاس تنموي نافع مباشر على سكان المنطقة.
+ ">
+    <meta name="keywords" content="university, Syria, Kalamoon, Education, Damascus, Medicin, engineering, architecture,
+    civil, Pharmacy, dentestry, science, top,">
+    <meta name='viewport'
+        content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' />
+    <script tyle="text/javascript" src="data/collegeData.js"></script>
+    <script tyle="text/javascript" src="js//p5.js"></script>
+    <script tyle="text/javascript" src="js//p5.sound.min.js"></script>
+    <script tyle="text/javascript" src="js//jquery-3.2.1.min.js"></script>
+    <script tyle="text/javascript" src="js//fancywebsocket.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist//pell.css">
+    <link rel="stylesheet" type="text/css" href="css//uok.css">
+
+    <style>
+    </style>
+</head>
+
+<body oncontextmenu="return false;">
+    <menu oncontextmenu="return false;">
+        <script tyle="text/javascript" src='js//Multy.js'></script>
+    </menu>
+    <article id="mainDisplay">
+        <span title=close alt=close class=closeButton
+            onclick="this.parentElement.style.transform = 'translateY(-900px)';"
+            onmouseover="this.style.transform = 'rotate(90deg)';" onmouseout="this.style.transform = 'rotate(0deg)'; menuDisplayed = false;
+            slideItemRight(document.getElementById('subPageClose'));
+            slideItemRight(document.getElementById('btn'));">X</span>
+        <header class=mainContainer>
+            <div class=mainContainertitle>
+                <img id=collegeLogo src="images//uokLogos//ENG.png">
+                <h3 id=collegeTitle class=collegeTitle>كلية الهندسة</h3>
+            </div>
+        </header>
+        <div class=adminAddContainer title=adminAddContainer>
+            <div class='adminAdd p1' title='hello' id=adminAdd>
+                <script>
+                    var info = 0;
+                    var Server;
+                    var changed = false;
+
+                    $(document).ready(function () {
+                        //window.statusbar.text = "Getting data from server... ";
+                        console.log('\nConnecting...');
+                        Server = new FancyWebSocket('ws://127.0.0.1:9300');
+                        //Let the user know we're connected
+                        Server.bind('open', function () {
+                            console.log("\nConnected.");
+                        });
+
+                        //OH NOES! Disconnection occurred.
+                        Server.bind('close', function (data) {
+                            console.log("Disconnected.");
+                        });
+
+                        //Log any messages sent from server
+                        Server.bind('message', function (payload) {
+                            mylog(payload);
+
+                        });
+
+                        Server.connect();
+                    });
+
+                    function displayPage(element, info) {
+                        send('0' + (collegeIndex) + info);
+                        document.getElementById('subPageTitle').innerHTML = element.innerHTML;
+                        document.getElementById('pageTitle').innerHTML = element.innerHTML;
+                        element.parentElement.style.transform = 'translateX(0px)';
+                    }
+                </script>
+                <span id=pullButton1 class=pullButton onclick="displayPage(this,0);">
+                    نبذة عن الكلية
+                </span>
+                <span id=pullButton2 class="pullButton pb1" onclick="displayPage(this,1);">
+                    رسالة الكلية
+                </span>
+                <span id=pullButton3 class="pullButton pb2" onclick="displayPage(this,2);">
+                    مجلس الكلية
+                </span>
+                <span id=pullButton4 class="pullButton pb3" onclick="displayPage(this,3);">
+                    كلمة العميد
+                </span>
+                <span id=pullButton5 class="pullButton pb4" onclick="displayPage(this,4);">
+                    أهداف الكلية
+                </span>
+                <span id=pullButton6 class="pullButton pb5" onclick="displayPage(this,5);">
+                    أقسام الكلية
+                </span>
+                <span id=pullButton7 class="pullButton pb6" onclick="displayPage(this,6);">
+                    الدرجات العلمية
+                </span>
+                <span title=close id=subPageClose alt=close class=subPageCloseButton onclick="slideItemRight(this);"
+                    onmouseover="this.style.transform = 'rotate(90deg)';"
+                    onmouseout="this.style.transform = 'rotate(0deg)';">X</span>
+                <form class=loginForm id=loginForm onmouseout="this.style.opacity = 0;
+                    this.style.transform = 'translateY(0px)';
+                ">
+                    User Name<input type=text>
+                    Password<input type=password><br><br>
+                    <input type=submit value="LogIn" onclick="loggedIn = true">
+                </form>
+                <span title=edit alt=edit class=subPageEditButton onclick="
+                    document.getElementById('loginForm').style.zIndex = 1;
+                    document.getElementById('loginForm').style.opacity = 1;
+                    document.getElementById('loginForm').style.transform = 'translateY(160px)';
+                    if(loggedIn){document.getElementById('editThis').style.transform = 'translateX(0px)';"
+                    onmouseover="this.style.backgroundColor= 'burlywood';" onmouseout="this.style.backgroundColor = 'transparent';
+                     ">
+                    <img src="images//icons//1Edit.png"></span>
+                <h1 id=pageTitle class=pageTitle></h1>
+                <div id=pageContent>
+                    <P>
+                        تحصيل المعلومات من مخدم الموقع ...
+                    </P>
+                </div>
+            </div>
+            <div class=adminAdd id=editThis title=editPage>
+                <div id="editor" class="UOKEDIT"></div>
+                <!--div id=htmlOutput>النص مع تنسيقاتة</div -->
+                <span id=btn title=close alt=close class=subPageCloseButton onclick="slideItemRight(this);"
+                    onmouseover="this.style.transform = 'rotate(90deg)';"
+                    onmouseout="this.style.transform = 'rotate(0deg)';">X</span>
+                <input class=saveButton type="button" value='حفظ' onclick="document.getElementById('mainDisplay').style.transform = 'translateY(0px)';
+                    if(changed)send('1' + (collegeIndex) + info + '*' + theText);">
+                <span id=subPageTitle><b>
+                        عنوان الصفحة
+                    </b></span>
+                <script src="dist/pell.js"></script>
+                <script>
+                    var editor = window.UOKEDIT.init({
+                        element: document.getElementById('editor'),
+                        defaultParagraphSeparator: 'p',
+                        onChange: function (html) {
+                            theText = html;
+                            /* commented fo now
+                            document.getElementById('htmlOutput').textContent = theText;
+                            */
+                            changed = true;
+                            document.getElementById('pageContent').innerHTML = theText;
+                        }
+                    })
+                </script>
+            </div>
+            <img src='images//collegesBG//eng01.jpg' title=Engineering01 class=collegePic id=collegePic>
+            <img src='images//icons//1Thump.png' title=nail class=nail id=nail>
+        </div>
+    </article>
+    <footer>
+    </footer>
+    <script>
+        document.getElementById('adminAdd').style.transform = 'translateX(' + myWidth + 'px)';
+        document.getElementById('editThis').style.transform = 'translateX(' + myWidth + 'px)';
+    </script>
+</body>
+
+</html>

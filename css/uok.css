@@ -1,0 +1,345 @@
+        @font-face {
+            font-family: UOK;
+            src: local('Tajawal'), local('Tajawal-Regular'), url('../../css//font//Tajawal.woff2') format('woff2');
+            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+        }
+
+        body,
+        html {
+            text-align: center;
+            background: url('../../images//singlePageBG//bg.png');
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            position: absolute;
+
+        }
+
+        canvas {
+            position: absolute;
+            top: 120px;
+            left: 0px;
+            right: 0px;
+            margin: auto;
+            padding: 0px;
+            box-shadow: 3px 3px 15px 5px #808080;
+            background-image: linear-gradient(to bottom, #5CC3FF, #73FF26, #734C26);
+            z-index: 100;
+            border: 10px rgb(0, 0, 75) solid;
+        }
+
+        menu {
+            top: 0px;
+            bottom: 200px;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            position: absolute;
+            text-align: center;
+            z-index: 0;
+        }
+
+        article {
+            position: relative;
+            height: 710px;
+            margin: 50px 93px auto 93px;
+            padding: 0px;
+            display: block;
+            transform: translateY(-900px);
+            transition: all 1500ms ease-in;
+            box-shadow: darkslategrey 5px 5px 15px 1px;
+            z-index: 902;
+            font-family: UOK;
+            direction: rtl;
+            background: url('../../images//singlePageBG//bg.png');
+        }
+
+        article header {
+            position: absolute;
+            top: 0px;
+            height: 660px;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            background-image: url('../../images//headersAndLogo//transLogoSmall.png');
+            background-repeat: repeat;
+            border: 25px solid lightblue;
+            border-image: url('../../images//singlePageBG//EEE.png') 30 round;
+            opacity: 0.95;
+            z-index: 900;
+        }
+
+        .mainContainerTitle {
+            position: absolute;
+            top: -200px;
+            height: 300px;
+            right: -40px;
+            background: url('../../images//icons//1wooden-board.png') 0 0 no-repeat;
+            width: 400px;
+            color: white;
+        }
+
+        article .mainContainerTitle img {
+            position: absolute;
+            top: 200px;
+            right: 50px;
+            width: 80px;
+            margin: 0px;
+            padding: 0px;
+            filter: invert(100%);
+
+        }
+
+        article .mainContainerTitle h3 {
+            position: absolute;
+            top: 220px;
+            height: 100px;
+            right: 125px;
+            font-size: 30px;
+            font-weight: 900;
+            margin: 0px;
+            padding: 0px;
+            text-align: right;
+        }
+
+        footer {
+            position: absolute;
+            display: block;
+            height: 200px;
+            bottom: 0px;
+            top: 800px;
+            left: 0px;
+            right: 0px;
+            margin: 0px;
+            padding: 0px;
+            background: orangered;
+            direction: rtl;
+            z-index: 999;
+        }
+
+        article .closeButton {
+            position: absolute;
+            top: 29px;
+            left: 29px;
+            width: 26px;
+            height: 24px;
+            margin: 0px;
+            padding: 0px;
+            padding-top: 2px;
+            font-size: 5mm;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: orangered;
+            border: rgb(255, 255, 255) 2px solid;
+            border-radius: 25px;
+            cursor: alias;
+            z-index: 903;
+            transition: all 500ms ease-in;
+        }
+
+        .adminAddContainer {
+            position: absolute;
+            top: 120px;
+            left: 26px;
+            right: 26px;
+            bottom: 26px;
+            display: block;
+            z-index: 900;
+            overflow: hidden;
+        }
+
+        .adminAdd {
+            position: absolute;
+            top: 30px;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            display: block;
+            text-align: right;
+            z-index: 901;
+            border: solid lightsteelblue 5px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 3px 1px rgb(0, 38, 59);
+            transition: all 1000ms ease-in;
+        }
+
+        #htmlOutput {
+            outline: 0;
+            overflow-y: scroll;
+            widows: 90%;
+            white-space: pre-wrap;
+            box-sizing: border-box;
+            left: 20px;
+            right: 20px;
+            padding: 20px;
+            height: 85px;
+            background-color: lightgray;
+        }
+
+        .saveButton {
+            position: absolute;
+            top: 4px;
+            left: 32px;
+            width: 120px;
+            height: 28px;
+            margin: 0px;
+            padding: 0px;
+            padding-top: 1px;
+            font-size: 4mm;
+            background-color: darkgrey;
+            border: none;
+            cursor: pointer;
+            outline: 0;
+            vertical-align: bottom;
+        }
+
+        .pullButton {
+            position: absolute;
+            top: 4px;
+            left: -520px;
+            width: 440px;
+            border: orangered 2px solid;
+            border-radius: 10px 0px 0px 10px;
+            height: 40px;
+            margin: 0px;
+            padding: 2px;
+            padding-right: 25px;
+            font-size: 7mm;
+            font-weight: 900;
+            background-color: darkblue;
+            cursor: pointer;
+            outline: 0;
+            vertical-align: bottom;
+            color: whitesmoke;
+            text-align: right;
+            opacity: 0.95;
+            font-family: UOK;
+        }
+
+        #subPageTitle {
+            position: absolute;
+            top: 5px;
+            left: 180px;
+            width: 200px;
+            height: 30px;
+            margin: 0px;
+            padding: 0px;
+            font-size: 4mm;
+        }
+
+        article .subPagecloseButton {
+            position: absolute;
+            top: 7px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            margin: 0px;
+            padding: 0px;
+            font-size: 4mm;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: darkgrey;
+            border: rgb(255, 255, 255) 1px solid;
+            border-radius: 20px;
+            cursor: alias;
+            z-index: 903;
+            text-align: center;
+            transition: all 500ms ease-in;
+        }
+
+        article .subPageEditButton {
+            position: absolute;
+            top: 5px;
+            left: 40px;
+            width: 40px;
+            height: 40px;
+            margin: 0px;
+            padding: 0px;
+            font-size: 4mm;
+            font-family: Arial, Helvetica, sans-serif;
+            border: rgb(255, 255, 255) 1px solid;
+            cursor: alias;
+            text-align: center;
+            transition: all 500ms ease-in;
+        }
+
+        .p1 {
+            background-color: peachpuff;
+            border: solid orangered 5px;
+            padding: 25px;
+        }
+
+        .pb1 {
+            top: 60px;
+        }
+
+        .pb2 {
+            top: 120px;
+        }
+
+        .pb3 {
+            top: 180px;
+        }
+
+        .pb4 {
+            top: 240px;
+        }
+
+        .pb5 {
+            top: 300px;
+        }
+
+        .pb6 {
+            top: 360px;
+        }
+
+        .pageTitle {
+            color: darkblue;
+            font-weight: 900;
+        }
+
+        .collegePic {
+            position: absolute;
+            top: 70px;
+            left: 40px;
+            width: 380px;
+            padding: 20px;
+            background-color: white;
+            border: rgb(227, 231, 192) 1px solid;
+            padding-bottom: 40px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transform: rotate(-5deg);
+
+        }
+
+        .nail {
+            position: absolute;
+            top: 25px;
+            left: 410px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .loginForm {
+            background-color: white;
+            border: 4px blue solid;
+            width: 200px;
+            height: 150px;
+            position: absolute;
+            top: -150px;
+            left: 50px;
+            opacity: 0.0;
+            text-align: center;
+            transition: all 500ms ease-in;
+        }
+
+        .loginForm input {
+            background-color: blue;
+            color: white;
+            border: orange 2px solid;
+        }
