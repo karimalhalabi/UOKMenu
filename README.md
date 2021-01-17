@@ -1,3 +1,3 @@
 # UOKMenu
 An animated menu for UOK university.
-Usin p5 to animate a menu.
+Using p5 to animate a menu.
