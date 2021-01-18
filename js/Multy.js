@@ -50,7 +50,7 @@ var loggedIn = false;
 function preload() {
     //load image for snowflakes make pic
     bgImg = loadImage('images/singlePageBG/uokColleges.jpg');
-   // img2 = loadImage('cars/car.png');
+    img2 = loadImage('cars/Car.png');
     theme0 = loadSound('sounds/Intrusión.ogg');
     theme1 = loadSound('sounds/JungleBell.ogg');
     themeSound = theme0;
